@@ -9,67 +9,51 @@
 #import "ViewController.h"
 #import "Header.h"
 #import "MBProgressHUD+CQ.h"
+#import "LoginViewModel.h"
+
+
 
 @interface ViewController ()
 @property (weak, nonatomic) IBOutlet UITextField *acount;
 @property (weak, nonatomic) IBOutlet UITextField *pwd;
 @property (weak, nonatomic) IBOutlet UIButton *loginBtn;
 
+@property(nonatomic,strong)LoginViewModel *loginView;
+
+
+
 @end
 
 @implementation ViewController
+-(LoginViewModel *)loginView
+{
+  if(!_loginView)
+  {
+      _loginView = [[LoginViewModel alloc]init];
+  }
+    return _loginView;
+}
+
 
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    // 处理文本框业务逻辑
-    RACSignal *loginBtnEnbelsignal = [RACSignal combineLatest:@[_acount.rac_textSignal,_pwd.rac_textSignal] reduce:^id(NSString *account,NSString *pwd){
-        
-        return @(account.length&&pwd.length);
-        
-    }];
+
+    
+    // 绑定数据
+     RAC(self.loginView,account)= self.acount.rac_textSignal;
+     RAC(self.loginView,pwd)= self.pwd.rac_textSignal;
+
+    
     
     // 绑定登录按钮是否可用
-    RAC(_loginBtn,enabled) = loginBtnEnbelsignal;
-    
-    // 创建登录命令
-    RACCommand *loginCommand = [[RACCommand alloc]initWithSignalBlock:^RACSignal *(id input) {
-        
-        return [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
-            
-            [subscriber sendNext:@"发送登录数据"];
-            [subscriber sendCompleted];
-            
-            return  nil;
-        }];
-    }];
-    
-    //获取命令中的信号源
-    [loginCommand.executionSignals.switchToLatest subscribeNext:^(id x) {
-        NSLog(@"%@",x);
-    }];
-    
-    //监听命令执行的过程
-    
-    [loginCommand.executing subscribeNext:^(id x) {
-        if([x boolValue])
-        {
-            [MBProgressHUD showMessage:@"正在登录"];
-            NSLog(@"正在执行");
-        }else{
-            [MBProgressHUD hideHUD];
-            NSLog(@"执行完成");
-        }
-    }];
-    
-    
-    
-    
+    RAC(_loginBtn,enabled) = self.loginView.loginBtnEnbelsignal;
+
     // 监听按钮点击
     [[self.loginBtn rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(id x) {
         NSLog(@"点击了登录按钮");
         
-        [loginCommand execute:nil];
+        [self.loginView.loginCommand execute:nil];
     }];
 }
 

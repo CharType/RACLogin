@@ -17,6 +17,7 @@
 		3B097E241CECA79500757AE2 /* MBProgressHUD+CQ.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B097E201CECA79500757AE2 /* MBProgressHUD+CQ.m */; };
 		3B097E251CECA79500757AE2 /* MBProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 3B097E211CECA79500757AE2 /* MBProgressHUD.bundle */; };
 		3B097E261CECA79500757AE2 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B097E231CECA79500757AE2 /* MBProgressHUD.m */; };
+		3B097E291CECAC3F00757AE2 /* LoginViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B097E281CECAC3F00757AE2 /* LoginViewModel.m */; };
 		DE736D511F07F2F4062DB1C6 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61B23341DF94EB61A802D135 /* Pods.framework */; };
 /* End PBXBuildFile section */
 
@@ -51,6 +52,8 @@
 		3B097E211CECA79500757AE2 /* MBProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = MBProgressHUD.bundle; sourceTree = "<group>"; };
 		3B097E221CECA79500757AE2 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
 		3B097E231CECA79500757AE2 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
+		3B097E271CECAC3F00757AE2 /* LoginViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewModel.h; sourceTree = "<group>"; };
+		3B097E281CECAC3F00757AE2 /* LoginViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewModel.m; sourceTree = "<group>"; };
 		61B23341DF94EB61A802D135 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B530F2B5E56132A3D0C44D46 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -108,6 +111,8 @@
 				3B097E071CEC86BE00757AE2 /* Info.plist */,
 				3B097E1E1CECA79500757AE2 /* MBProgressHUD */,
 				3B097DF61CEC86BE00757AE2 /* Supporting Files */,
+				3B097E271CECAC3F00757AE2 /* LoginViewModel.h */,
+				3B097E281CECAC3F00757AE2 /* LoginViewModel.m */,
 			);
 			path = RACLogin;
 			sourceTree = "<group>";
@@ -312,6 +317,7 @@
 			files = (
 				3B097DFE1CEC86BE00757AE2 /* ViewController.m in Sources */,
 				3B097DFB1CEC86BE00757AE2 /* AppDelegate.m in Sources */,
+				3B097E291CECAC3F00757AE2 /* LoginViewModel.m in Sources */,
 				3B097E261CECA79500757AE2 /* MBProgressHUD.m in Sources */,
 				3B097E241CECA79500757AE2 /* MBProgressHUD+CQ.m in Sources */,
 				3B097DF81CEC86BE00757AE2 /* main.m in Sources */,
