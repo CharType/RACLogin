@@ -14,6 +14,9 @@
 		3B097E031CEC86BE00757AE2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3B097E021CEC86BE00757AE2 /* Assets.xcassets */; };
 		3B097E061CEC86BE00757AE2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B097E041CEC86BE00757AE2 /* LaunchScreen.storyboard */; };
 		3B097E111CEC86BE00757AE2 /* RACLoginTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B097E101CEC86BE00757AE2 /* RACLoginTests.m */; };
+		3B097E241CECA79500757AE2 /* MBProgressHUD+CQ.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B097E201CECA79500757AE2 /* MBProgressHUD+CQ.m */; };
+		3B097E251CECA79500757AE2 /* MBProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 3B097E211CECA79500757AE2 /* MBProgressHUD.bundle */; };
+		3B097E261CECA79500757AE2 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B097E231CECA79500757AE2 /* MBProgressHUD.m */; };
 		DE736D511F07F2F4062DB1C6 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61B23341DF94EB61A802D135 /* Pods.framework */; };
 /* End PBXBuildFile section */
 
@@ -42,6 +45,12 @@
 		3B097E0C1CEC86BE00757AE2 /* RACLoginTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RACLoginTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B097E101CEC86BE00757AE2 /* RACLoginTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RACLoginTests.m; sourceTree = "<group>"; };
 		3B097E121CEC86BE00757AE2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3B097E1C1CEC9D4C00757AE2 /* Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Header.h; sourceTree = "<group>"; };
+		3B097E1F1CECA79500757AE2 /* MBProgressHUD+CQ.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD+CQ.h"; sourceTree = "<group>"; };
+		3B097E201CECA79500757AE2 /* MBProgressHUD+CQ.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD+CQ.m"; sourceTree = "<group>"; };
+		3B097E211CECA79500757AE2 /* MBProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = MBProgressHUD.bundle; sourceTree = "<group>"; };
+		3B097E221CECA79500757AE2 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
+		3B097E231CECA79500757AE2 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
 		61B23341DF94EB61A802D135 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B530F2B5E56132A3D0C44D46 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -95,7 +104,9 @@
 				3B097DFF1CEC86BE00757AE2 /* Main.storyboard */,
 				3B097E021CEC86BE00757AE2 /* Assets.xcassets */,
 				3B097E041CEC86BE00757AE2 /* LaunchScreen.storyboard */,
+				3B097E1C1CEC9D4C00757AE2 /* Header.h */,
 				3B097E071CEC86BE00757AE2 /* Info.plist */,
+				3B097E1E1CECA79500757AE2 /* MBProgressHUD */,
 				3B097DF61CEC86BE00757AE2 /* Supporting Files */,
 			);
 			path = RACLogin;
@@ -116,6 +127,18 @@
 				3B097E121CEC86BE00757AE2 /* Info.plist */,
 			);
 			path = RACLoginTests;
+			sourceTree = "<group>";
+		};
+		3B097E1E1CECA79500757AE2 /* MBProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				3B097E1F1CECA79500757AE2 /* MBProgressHUD+CQ.h */,
+				3B097E201CECA79500757AE2 /* MBProgressHUD+CQ.m */,
+				3B097E211CECA79500757AE2 /* MBProgressHUD.bundle */,
+				3B097E221CECA79500757AE2 /* MBProgressHUD.h */,
+				3B097E231CECA79500757AE2 /* MBProgressHUD.m */,
+			);
+			path = MBProgressHUD;
 			sourceTree = "<group>";
 		};
 		787EEEC47C209DBD7D08A0B9 /* Frameworks */ = {
@@ -219,6 +242,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3B097E061CEC86BE00757AE2 /* LaunchScreen.storyboard in Resources */,
+				3B097E251CECA79500757AE2 /* MBProgressHUD.bundle in Resources */,
 				3B097E031CEC86BE00757AE2 /* Assets.xcassets in Resources */,
 				3B097E011CEC86BE00757AE2 /* Main.storyboard in Resources */,
 			);
@@ -288,6 +312,8 @@
 			files = (
 				3B097DFE1CEC86BE00757AE2 /* ViewController.m in Sources */,
 				3B097DFB1CEC86BE00757AE2 /* AppDelegate.m in Sources */,
+				3B097E261CECA79500757AE2 /* MBProgressHUD.m in Sources */,
+				3B097E241CECA79500757AE2 /* MBProgressHUD+CQ.m in Sources */,
 				3B097DF81CEC86BE00757AE2 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
